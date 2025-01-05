@@ -3,7 +3,8 @@ const express = require('express');
 // Create a express app
 const app = express();
 
-app.get('/', (res, req) => {
+// Routes
+app.get('/', (req, res) => {
   res.json({ mssg: 'wellcome to the app Luis' })
 })
 
