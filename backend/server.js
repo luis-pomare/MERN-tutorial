@@ -4,6 +4,12 @@ const express = require('express');
 // Create a express app
 const app = express();
 
+// Global middleware
+app.use((req, res, next) => {
+  console.log(req.path, req.method)
+  next()
+})
+
 // Routes
 app.get('/', (req, res) => {
   res.json({ mssg: 'wellcome to the app Luis' })
